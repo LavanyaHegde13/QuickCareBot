@@ -1,0 +1,196 @@
+{
+    "intents": [
+      {
+        "intent": "afraid",
+        "patterns": ["I am afraid", "I feel scared", "I'm terrified"],
+        "responses": ["It’s okay to feel afraid. You’re not alone.", "Fear can be tough, but you’re stronger than you think!", "Want to talk about what’s scaring you?"]
+      },
+      {
+        "intent": "angry",
+        "patterns": ["I am angry", "I feel mad", "I'm really frustrated"],
+        "responses": ["I hear you. That sounds really frustrating.", "It’s okay to feel this way. Want to talk about it?", "Anger can be overwhelming. Maybe a deep breath will help?"]
+      },
+      {
+        "intent": "annoyed",
+        "patterns": ["I feel annoyed", "I'm irritated", "This is frustrating"],
+        "responses": ["That sounds frustrating! Want to share more about it?", "I understand. Sometimes little things can be really annoying.", "Taking a short break might help. Want some suggestions?"]
+      },
+      {
+        "intent": "bored",
+        "patterns": ["I feel bored", "I'm so bored", "There's nothing to do"],
+        "responses": ["Boredom can be an opportunity! Want to try something new?", "Maybe a story or a fun fact could help! Want to hear one?", "How about a quick breathing exercise or a short walk?", "Boredom is just your mind looking for something engaging. What’s something you’ve been wanting to try?"]
+      },
+      {
+        "intent": "confident",
+        "patterns": ["I feel confident", "I believe in myself", "I'm feeling strong"],
+        "responses": ["That’s great to hear! Keep believing in yourself!", "Confidence looks great on you! What’s on your mind?", "You’re capable of amazing things! Keep going."]
+      },
+      {
+        "intent": "excited",
+        "patterns": ["I am excited", "I can't wait", "I'm thrilled"],
+        "responses": ["That’s amazing! Tell me more about it!", "I love your excitement! What’s happening?", "Exciting times ahead! Enjoy the moment."]
+      },
+      {
+        "intent": "faithful",
+        "patterns": ["I feel faithful", "I believe in something greater"],
+        "responses": ["Faith is a beautiful thing. Keep believing!", "It’s wonderful to have faith. It gives strength.", "What keeps you inspired? I’d love to hear about it."]
+      },
+      {
+        "intent": "furious",
+        "patterns": ["I am furious", "I feel extremely angry", "I'm outraged"],
+        "responses": ["I hear you. That sounds really frustrating.", "It’s okay to feel this way. Want to talk about it?", "Anger can be overwhelming. Maybe a deep breath will help?"]
+      },
+      {
+        "intent": "grateful",
+        "patterns": ["I feel grateful", "I appreciate what I have", "I'm thankful"],
+        "responses": ["That’s beautiful! Gratitude makes life richer.", "Being grateful brings so much positivity. Keep it up!", "That’s a wonderful mindset! What are you grateful for today?"]
+      },
+      {
+        "intent": "guilty",
+        "patterns": ["I feel guilty", "I regret something", "I did something wrong"],
+        "responses": ["It’s okay to make mistakes. What matters is learning from them.", "Guilt can be tough, but self-forgiveness is important.", "Would you like to talk about it? I’m here to listen."]
+      },
+      {
+        "intent": "hopeful",
+        "patterns": ["I feel hopeful", "I believe in the future", "I have hope"],
+        "responses": ["That’s a great outlook! Keep believing in yourself.", "Hope is a powerful thing. Hold onto it!", "Good things are coming your way!"]
+      },
+      {
+        "intent": "impressed",
+        "patterns": ["I am impressed", "That was amazing", "I'm in awe"],
+        "responses": ["Wow! That must have been wonderful!", "It’s great to witness something inspiring!", "I love that! What impressed you the most?"]
+      },
+      {
+        "intent": "jealous",
+        "patterns": ["I feel jealous", "I wish I had that", "Why them and not me?"],
+        "responses": ["It’s natural to feel this way sometimes. You are enough.", "Instead of comparison, let’s focus on your amazing qualities!", "You have your own unique journey. Keep going!"]
+      },
+      {
+        "intent": "joyful",
+        "patterns": ["I feel joyful", "I am happy", "I'm in a great mood"],
+        "responses": ["That’s amazing! Keep spreading joy.", "Happiness looks great on you!", "I’m happy for you! What’s making you feel this way?"]
+      },
+      {
+        "intent": "lonely",
+        "patterns": ["I feel lonely", "I am alone", "I have no one"],
+        "responses": ["You are not alone. I'm here for you.", "Loneliness can be tough. Want to talk about something?", "Maybe a heartwarming story could help. Want to hear one?"]
+      },
+      {
+        "intent": "nostalgic",
+        "patterns": ["I feel nostalgic", "I miss the past", "I remember when"],
+        "responses": ["Memories can be powerful. Want to share one?", "It’s okay to miss the past, but remember to cherish today too.", "Thinking about good times can be comforting. What’s on your mind?"]
+      },
+      {
+        "intent": "prepared",
+        "patterns": ["I feel prepared", "I am ready", "I'm confident for what's next"],
+        "responses": ["That’s a great mindset! You’re going to do amazing!", "Being prepared is key to success. You’ve got this!", "I admire your readiness! What’s the big moment ahead?"]
+      },
+      {
+        "intent": "proud",
+        "patterns": ["I feel proud", "I accomplished something", "I'm happy with myself"],
+        "responses": ["That’s fantastic! You deserve it!", "You should be proud! Keep going.", "Celebrate your achievements, big or small!"]
+      },
+      {
+        "intent": "sad",
+        "patterns": ["I feel sad", "I am down", "I feel low"],
+        "responses": ["I’m really sorry you’re feeling this way. Want to talk about it?", "Sadness can be tough. I'm here for you.", "It’s okay to feel this way. You're not alone."]
+      },
+      {
+        "intent": "greetings",
+        "patterns": ["Hello", "Hi", "Hey", "Good morning", "Good evening"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! What’s on your mind?", "Hey! How are you doing?", "Good morning! How can I help you?", "Good evening! What's up?"]
+      },
+      {
+        "intent": "bye",
+        "patterns": ["Goodbye", "Bye", "See you later", "Take care", "Catch you later"],
+        "responses": ["Goodbye! Have a great day!", "Take care! See you soon!", "It was nice talking to you! Bye for now!", "See you later! Don't hesitate to reach out!", "Catch you later! Stay safe!"]
+      },
+      {
+        "intent": "stressed",
+        "patterns": ["I am stressed", "I feel overwhelmed", "I'm under too much pressure"],
+        "responses": ["Stress can be tough. Maybe some deep breathing will help?", "Feeling overwhelmed? Let's break things down into smaller steps.", "It’s okay to feel stressed. How about we try to sort out what’s most urgent?"]
+      },
+      {
+        "intent": "anxious",
+        "patterns": ["I feel anxious", "I'm worried", "My anxiety is high"],
+        "responses": ["Anxiety can be really hard. Do you want to talk about what's on your mind?", "It’s normal to feel anxious sometimes. Would some calming techniques help?", "Let's focus on grounding exercises to manage that anxiety."]
+      },
+      {
+        "intent": "anticipating",
+        "patterns": ["I am anticipating", "I'm looking forward to", "I can't wait for"],
+        "responses": ["That's exciting! Anticipation can fuel your energy. What are you waiting for?", "Looking forward to something can be so motivating! What's the big event?", "Anticipation is great! How can you make the most of this time leading up to it?"]
+      },
+      {
+        "intent": "disappointed",
+        "patterns": ["I'm disappointed", "This isn't what I expected", "It's not what I hoped for"],
+        "responses": ["Disappointment hurts. Sometimes things don't go as planned, but we can find a new path.", "It's okay to feel let down. What were you hoping for?", "I'm sorry you're feeling this way. Can we look at how to move forward?"]
+      },
+      {
+        "intent": "embarrassed",
+        "patterns": ["I feel embarrassed", "That was so awkward", "I'm so mortified"],
+        "responses": ["Everyone feels embarrassed at times. It's part of being human. How can we laugh about it now?", "Embarrassment can be tough. Want to talk about what happened?", "You're not alone in feeling this way. Let's focus on something positive."]
+      },
+      {
+        "intent": "insecure",
+        "patterns": ["I feel insecure", "I doubt myself", "I'm not sure if I'm good enough"],
+        "responses": ["It's natural to have moments of doubt. You have unique strengths. Want to talk about them?", "Insecurity can be challenging, but remember your worth. What's making you feel this way?", "You're more capable than you think. Let's explore your achievements."]
+      },
+      {
+        "intent": "overwhelmed",
+        "patterns": ["I'm overwhelmed", "Too much is happening", "I can't handle all this"],
+        "responses": ["Feeling overwhelmed is a sign you're doing a lot. Let's prioritize what's important.", "It's okay to feel this way. How about we break things down into smaller, manageable tasks?", "Overwhelm happens to everyone. Let's take a moment to breathe and refocus."]
+      },
+      {
+        "intent": "seeking_motivation",
+        "patterns": ["I need motivation", "I'm feeling stuck", "How can I get going?"],
+        "responses": ["Motivation can come from small victories. What's one thing you can achieve today?", "Feeling stuck is common. Here's a motivational quote for you: [insert quote]", "Let's think of one thing that excites you about your goals."]
+      },
+      {
+        "intent": "needing_reassurance",
+        "patterns": ["Am I doing okay?", "Do you think I can do this?", "I need some reassurance"],
+        "responses": ["You're doing great! Remember, progress is not always linear but you're moving forward.", "I believe in your capabilities. What makes you doubt yourself?", "You've got this! Let's remind ourselves of all the times you've succeeded."]
+      },
+      {
+        "intent": "seeking_friendship",
+        "patterns": ["I need a friend", "Can we be friends?", "I feel like I need more friends"],
+        "responses": ["I'm here as a friend. What's on your mind?", "Friendship is important. Tell me about your interests so we can connect better.", "Making friends can be tough but rewarding. What qualities do you look for in a friend?"]
+      },
+      {
+        "intent": "celebrating",
+        "patterns": ["I have good news", "I achieved something", "I want to celebrate"],
+        "responses": ["Congratulations! What's the good news you want to share?", "Achievements deserve celebration! How do you plan to celebrate?", "That's wonderful! Let's take a moment to celebrate this victory."]
+      },
+      {
+        "intent": "grieving",
+        "patterns": ["I lost someone", "I'm grieving", "I'm dealing with a loss"],
+        "responses": ["I'm so sorry for your loss. Grieving is a process. I'm here if you want to talk about it.", "Loss is hard. Remember, it's okay to feel all the emotions that come with it.", "During grief, it’s important to express your feelings. What memories do you cherish?"]
+      },
+      {
+        "intent": "new_beginnings",
+        "patterns": ["I'm starting something new", "I'm moving on", "New chapter in my life"],
+        "responses": ["New beginnings can be exciting. What are you looking forward to?", "Moving on to new chapters is brave. How do you feel about this change?", "Starting anew is an adventure. What's the first step you're taking?"]
+      },
+      {
+        "intent": "need_help",
+        "patterns": ["I need help", "Can you help me?", "I don't know what to do"],
+        "responses": ["I'm here to help. Can you describe what you need assistance with?", "Help is available. What's the issue you're facing?", "Let's figure this out together. What's bothering you?"]
+      },
+      {
+        "intent": "need_help",
+        "patterns": ["I need help", "Can you help me?", "I don't know what to do"],
+        "responses": ["I'm here to help. Can you describe what you need assistance with?", "Help is available. What's the issue you're facing?", "Let's figure this out together. What's bothering you?"]
+      },
+      {
+        "intent": "crack_joke",
+        "patterns": ["Tell me a joke", "I need a laugh", "Can you make me laugh?"],
+        "responses": [
+          "Why don't scientists trust atoms? Because they might be up to something!",
+          "Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them!",
+          "Why was the math book sad? Because it had too many problems.",
+          "What do you call cheese that isn't yours? Nacho cheese!",
+          "Why don't eggs tell jokes? They'd crack up."
+        ]
+      }
+    ]
+}
+  

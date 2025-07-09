@@ -1,0 +1,14 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore large files
+*.pkl
+*.safetensors
+*.db
+*.sqlite
+*.log
+
+# Ignore environment files
+.env
+.venv/

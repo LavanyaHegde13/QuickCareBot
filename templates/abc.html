@@ -1,0 +1,221 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathetic Chatbot</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
+
+        .chat-header {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .chat-messages {
+            padding: 20px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .bot-message {
+            justify-content: flex-start;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 12px 20px;
+            border-radius: 25px;
+            margin: 5px;
+        }
+
+        .user-bubble {
+            background-color: #6c5ce7;
+            color: white;
+        }
+
+        .bot-bubble {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .input-container {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        button {
+            padding: 15px 20px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5b4bc4;
+        }
+
+        .typing-indicator {
+            padding: 10px 20px;
+            display: none;
+        }
+
+        .typing-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #999;
+            border-radius: 50%;
+            display: inline-block;
+            animation: typing 1.4s infinite;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>InspiroBot</h1>
+            <p>I'm here to listen and understand</p>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <div class="message-bubble bot-bubble">
+                    Hello, I'm here to listen. How are you feeling today?
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot" style="animation-delay: 0.2s"></div>
+            <div class="typing-dot" style="animation-delay: 0.4s"></div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Share your thoughts...">
+            <button onclick="sendMessage()">Send</button>
+            <button class="action-btn stories-btn" onclick="showStorySuggestions()">Comforting Stories</button>
+            <button class="action-btn music-btn" onclick="showMusicSuggestions()">Relaxing Music</button>
+            <button class="action-btn yoga-btn" onclick="showYogaSuggestions()">Yoga Poses</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const typingIndicator = document.getElementById('typing-indicator');
+
+        function addMessage(message, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            
+            const bubble = document.createElement('div');
+            bubble.className = `message-bubble ${isUser ? 'user-bubble' : 'bot-bubble'}`;
+            bubble.textContent = message;
+            
+            messageDiv.appendChild(bubble);
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            typingIndicator.style.display = 'block';
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.style.display = 'none';
+        }
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage(message, true);
+            userInput.value = '';
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Simulate bot response (replace with actual API call)
+            setTimeout(() => {
+                hideTypingIndicator();
+                addMessage(getEmpatheticResponse(message), false);
+            }, 1500);
+        }
+
+        function getEmpatheticResponse(userMessage) {
+            // Replace with actual NLP processing and response generation
+            const responses = [
+                "That sounds really challenging. Would you like to share more about how that's affecting you?",
+                "I appreciate you opening up about this. It takes courage to share these feelings.",
+                "I'm here to listen. Let's work through this together.",
+                "That must be really difficult. How long have you been feeling this way?",
+                "Your feelings are completely valid. Thank you for trusting me with this."
+            ];
+            return responses[Math.floor(Math.random() * responses.length)];
+        }
+
+        // Handle Enter key
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html> {% endcomment %}
